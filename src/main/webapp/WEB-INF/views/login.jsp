@@ -45,13 +45,13 @@
 							method="post">
 							<fieldset>
 
-								<input id="textinput" name="textinput" type="text"
+								<input id="textinput" name="username" type="text"
 									placeholder="Enter User Name" class="form-control input-md">
 								<div class="spacing">
 									<input type="checkbox" name="checkboxes" id="checkboxes-0"
 										value="1"><small> Remember me</small>
 								</div>
-								<input id="textinput" name="textinput" type="text"
+								<input id="textinput" name="password" type="password"
 									placeholder="Enter Password" class="form-control input-md">
 								<div class="spacing">
 									<a href="#"><small> Forgot Password?</small></a><br />

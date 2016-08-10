@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.blogging.application.model.UserLogin;
 import com.blogging.application.services.LoginService;
 
 @Controller
@@ -24,9 +25,20 @@ public class LoginController {
 	public String login(@RequestParam("username") String username,@RequestParam("password") String password,Model model){
 		
 		logger.info("In loggin controller");
-		model.addAttribute("userLogin",this.loginService.getPasswordById(username));
+		try{
+			UserLogin userLogin = this.loginService.getPasswordById(username);
+			if(userLogin.getPassword().equals(password)){
+				return "success";
+			}else{
+				return "login";
+			}
+		}catch(Exception e){
+			logger.error(e.getMessage());
+			return "login";
+		}
+		/*model.addAttribute("userLogin",this.loginService.getPasswordById(username));
 		logger.info(this.loginService.getPasswordById(username).toString());
-		return "login";
+		return "login";*/
 		
 	}
 

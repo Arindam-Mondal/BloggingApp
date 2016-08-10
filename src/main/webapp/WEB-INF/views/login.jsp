@@ -20,7 +20,9 @@
 <body>
 	<div class="middlePage">
 		<div class="page-header">
-			<!-- <h1 class="logo">Techulus <small>Welcome to our place!</small></h1> -->
+			<h1 class="logo">
+				Blogging Arena <small>Welcome to our place!</small>
+			</h1>
 		</div>
 
 		<div class="panel panel-info">
@@ -69,7 +71,9 @@
 			</div>
 		</div>
 
-		<!-- <p><a href="https://github.com/arjunkomath">About</a> · Arjun</p> -->
+		<div class="signup text-center">
+			<h4> Not yet a member! <a href="<%=request.getContextPath() %>/register">Sign Up.</a> </h4>
+		</div>
 
 	</div>
 </body>
